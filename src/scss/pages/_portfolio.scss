@@ -1,0 +1,95 @@
+section#portfolio.layout.layout-portfolio{
+    padding: 90px 0;
+   
+
+    .container{
+        width:95%;
+        margin:0 auto;
+        max-width:1440px;
+        position:relative;
+    }
+
+    .portfolio-grid{
+        padding: 25px 0;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .single-project{
+            width:100%;
+            text-align: center;
+        }
+    }
+}
+
+/* 
+
+homework:
+kill animations in mobile, trigger animnations at 1040px and above (make variable for it)
+canyonroadfilms.com/directors
+// free use images, set as css background 
+//image overlay
+//title with animation
+
+
+
+&::after{
+    content:"";
+    flex:auto; 
+}
+
+.single project{
+
+    width:100;
+    text-align: center;
+    margin:15px 0;
+    position: relative;
+    padding:0 15px;
+    height:275px;
+    transition: all 0.2s ease-out;
+    
+    
+    @media(min-width:768px){
+        width:50%
+        height:250px;
+    }
+
+    @media(min-width:992px){ 
+        width:33.3%
+        height:200px;
+    }
+
+   @media(min-width:1200px){
+        width:25%
+        height:200px;
+    }
+
+    &:focus,
+    &:active{
+        outline:0pxl
+    }
+
+    &:hover{
+        .text-container{
+
+        }
+    }
+
+
+}
+
+.text-container{
+    position:absolute;
+    top:50%;
+    left:0;
+    transform:translateY(-50%)
+    width:100%:
+    padding:0 20px
+}
+
+SCSS SUB-FOLDERS
+base folder for variables for breakpoints, fonts, colors. your hard-coded settings 
+vendor folder for outside libraries and stuff, downloaded assets, icon sets, third party vendors etc
+pages for .scss pages 
+*/
