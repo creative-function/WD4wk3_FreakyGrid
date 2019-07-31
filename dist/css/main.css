@@ -163,14 +163,141 @@ base folder for variables for breakpoints, fonts, colors. your hard-coded settin
 vendor folder for outside libraries and stuff, downloaded assets, icon sets, third party vendors etc
 pages for .scss pages 
 */
-section#menu-big.grid ul .grid-item {
-	width: 500px;
-	height: 500px;
-	margin: 10px;
-	background-color: powderblue;
+section#side-nav {
+	display: none;
+}
+
+@media (min-width: 1024px) {
+	section#side-nav {
+		display: block;
+		background-color: purple;
+	}
+}
+
+.page-2-wrapper {
+	min-width: 360px;
+}
+
+section#menu-big {
+	background-color: orange;
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+}
+
+section#menu-big ul {
+	display: -webkit-box;
+	display: flex;
+	flex-flow: wrap;
+	width: 100%;
+	height: 100%;
+}
+
+section#menu-big ul li.grid-item {
+	width: 100%;
+	height: 350px;
+	margin: 7%;
+	background-color: yellow;
+	position: relative;
+}
+
+section#menu-big ul li.grid-item .item-text {
+	background-color: pink;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	width: 100%;
+	position: absolute;
+	bottom: -7%;
+	right: -10%;
+}
+
+section#menu-big ul li.grid-item .item-text .t-1 {
+	width: 75%;
+	height: 35px;
+	margin-bottom: 5%;
+	background-color: green;
+}
+
+section#menu-big ul li.grid-item .item-text .t-2 {
+	width: 100%;
+	background-color: greenyellow;
+	height: 75px;
+}
+
+@media (min-width: 600px) {
+	section#menu-big ul li.grid-item {
+		width: 40%;
+		height: 400px;
+		margin: 5%;
+		background-color: paleturquoise;
+	}
+}
+
+section#menu-small {
+	background-color: lightseagreen;
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+}
+
+section#menu-small ul {
+	display: -webkit-box;
+	display: flex;
+	flex-flow: wrap;
+	width: 100%;
+	height: 100%;
+}
+
+section#menu-small ul li.grid-item {
+	width: 45%;
+	height: 200px;
+	margin: 2.5%;
+	margin-bottom: 45%;
+	background-color: #e9b8f0;
+}
+
+section#menu-small ul li.grid-item .item-text {
+	background-color: pink;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	width: 100%;
+	position: relative;
+	bottom: -110%;
+}
+
+section#menu-small ul li.grid-item .item-text .t-1 {
+	width: 100%;
+	height: 75px;
+	margin-bottom: 5%;
+	background-color: green;
+}
+
+section#menu-small ul li.grid-item .item-text .t-2 {
+	width: 75%;
+	background-color: greenyellow;
+	height: 35px;
+}
+
+@media (min-width: 600px) {
+	section#menu-small ul li.grid-item {
+		width: 25%;
+		height: 250px;
+		margin: 4%;
+		background-color: #d56982;
+	}
 }
 
 /* 1. Main Layout ================================= */
+html {
+	height: 100%;
+}
+
 * {
 	box-sizing: border-box;
 }

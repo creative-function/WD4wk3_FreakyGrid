@@ -1,10 +1,143 @@
-section#menu-big.grid{
-    ul{
-        .grid-item{
-            width: 500px;
-            height:500px;
-            margin:10px;
-            background-color: powderblue;
-        }
+
+// $tablet: "(min-width: 600px)";
+// $desktop: "(min-width: 1024px)";
+// $XLdesktop: "(min-width: 1360px)";
+
+
+section#side-nav{
+    display:none;
+
+    @media#{$desktop}{
+        display:block;
+        background-color: purple;
+     
     }
 }
+
+.page-2-wrapper{
+    min-width: 360px;
+}
+section#menu-big{
+   background-color: orange;
+   width:90%;
+   height:auto;
+   margin: 0 auto;
+
+  
+    ul{
+        display: flex;
+        flex-flow: wrap;
+        width:100%;
+        height: 100%;
+        
+
+        li.grid-item{
+            width: 100%;
+            height:350px;
+            margin:7%;
+            background-color: yellow;
+            position: relative;
+
+            .item-text{
+                background-color: pink;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                bottom:-7%;
+                right:-10%;
+
+                .t-1{
+                    width:75%;
+                    height: 35px;
+                    margin-bottom:5%;
+                    background-color: green;
+
+                }
+
+                .t-2{
+                    width:100%;
+                    background-color: greenyellow;
+                    height: 75px;
+
+                }
+            }
+        }
+
+        @media#{$tablet}{
+
+            li.grid-item{
+                width: 40%;
+                height:400px;
+                margin:5%;
+                background-color: paleturquoise;
+            }
+
+        }
+    }
+
+}
+
+
+section#menu-small{
+    background-color: lightseagreen;
+    width:90%;
+    height:auto;
+    margin: 0 auto;
+    
+ 
+    ul{
+        display: flex;
+        flex-flow: wrap;
+        width:100%;
+        height: 100%;
+        
+
+        li.grid-item{
+            width: 45%;
+            height:200px;
+            margin:2.5%;
+            margin-bottom: 45%;
+            background-color: rgb(233, 184, 240);
+
+            .item-text{
+                background-color: pink;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                position: relative;
+                bottom:-110%;
+
+                .t-1{
+                    width:100%;
+                    height: 75px;
+                    margin-bottom:5%;
+                    background-color: green;
+
+                }
+
+                .t-2{
+                    width:75%;
+                    background-color: greenyellow;
+                    height: 35px;
+
+                }
+            }
+        }
+
+        @media#{$tablet}{
+
+            li.grid-item{
+                width: 25%;
+                height:250px;
+                margin:4%;
+                background-color: rgb(213, 105, 130);
+    
+            }
+
+        }
+    }
+ 
+}
+ 
+
