@@ -163,29 +163,58 @@ base folder for variables for breakpoints, fonts, colors. your hard-coded settin
 vendor folder for outside libraries and stuff, downloaded assets, icon sets, third party vendors etc
 pages for .scss pages 
 */
-section#side-nav {
-	display: none;
+body {
+	background-color: #465461;
+}
+
+nav ul {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
+	-webkit-box-pack: justify;
+	        justify-content: space-between;
+	margin: 2%;
+	padding: 2%;
+}
+
+nav ul a {
+	text-decoration: none;
 }
 
 @media (min-width: 1024px) {
-	section#side-nav {
-		display: block;
-		background-color: purple;
+	nav ul {
+		display: none;
 	}
 }
 
-.page-2-wrapper {
+section#nav-wrapper {
+	width: 100%;
+	max-width: 1440px;
+}
+
+section#nav-wrapper .page-2-wrapper {
 	min-width: 360px;
 }
 
-section#menu-big {
-	background-color: orange;
+section#nav-wrapper .page-2-wrapper section#hdr {
+	background-image: url("../img/TWDhdr.jpg");
+	background-size: cover;
+	width: 90%;
+	height: 256px;
+	margin: 0 auto;
+	margin-bottom: 10%;
+}
+
+section#nav-wrapper .page-2-wrapper section#menu-big {
 	width: 90%;
 	height: auto;
 	margin: 0 auto;
+	background-color: #173C5C;
 }
 
-section#menu-big ul {
+section#nav-wrapper .page-2-wrapper section#menu-big ul {
 	display: -webkit-box;
 	display: flex;
 	flex-flow: wrap;
@@ -193,16 +222,16 @@ section#menu-big ul {
 	height: 100%;
 }
 
-section#menu-big ul li.grid-item {
+section#nav-wrapper .page-2-wrapper section#menu-big ul li.grid-item {
 	width: 100%;
 	height: 350px;
-	margin: 7%;
-	background-color: yellow;
+	margin: 10%;
+	margin-bottom: 5%;
+	border-top: 5px solid black;
 	position: relative;
 }
 
-section#menu-big ul li.grid-item .item-text {
-	background-color: pink;
+section#nav-wrapper .page-2-wrapper section#menu-big ul li.grid-item .item-text {
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
@@ -210,40 +239,65 @@ section#menu-big ul li.grid-item .item-text {
 	        flex-direction: column;
 	width: 100%;
 	position: absolute;
-	bottom: -7%;
-	right: -10%;
+	bottom: -25%;
+	right: 10%;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 2em;
+	letter-spacing: .3em;
 }
 
-section#menu-big ul li.grid-item .item-text .t-1 {
+section#nav-wrapper .page-2-wrapper section#menu-big ul li.grid-item .item-text .t-1 {
 	width: 75%;
 	height: 35px;
 	margin-bottom: 5%;
-	background-color: green;
+	background-color: #ECA84B;
 }
 
-section#menu-big ul li.grid-item .item-text .t-2 {
+section#nav-wrapper .page-2-wrapper section#menu-big ul li.grid-item .item-text .t-2 {
 	width: 100%;
-	background-color: greenyellow;
-	height: 75px;
+	height: 50px;
+	background-color: #ECA84B;
+}
+
+section#nav-wrapper .page-2-wrapper section#menu-big ul .grid-item:nth-child(even) {
+	border-bottom: 5px solid black;
+	border-top: none;
+}
+
+section#nav-wrapper .page-2-wrapper section#menu-big ul .grid-item:nth-child(even) .item-text {
+	top: -30px;
+}
+
+section#nav-wrapper .page-2-wrapper section#menu-big ul .grid-item:nth-child(even) .item-text .t-2 {
+	width: 75%;
+	height: 35px;
+	margin-bottom: 5%;
+}
+
+section#nav-wrapper .page-2-wrapper section#menu-big ul .grid-item:nth-child(even) .item-text .t-1 {
+	width: 100%;
+	height: 50px;
+}
+
+section#nav-wrapper .page-2-wrapper section#menu-big ul .grid-item:nth-child(n+2):nth-child(-n+3) .item-text {
+	left: -10%;
 }
 
 @media (min-width: 600px) {
-	section#menu-big ul li.grid-item {
+	section#nav-wrapper .page-2-wrapper section#menu-big ul li.grid-item {
 		width: 40%;
-		height: 400px;
+		height: 350px;
 		margin: 5%;
-		background-color: paleturquoise;
 	}
 }
 
-section#menu-small {
-	background-color: lightseagreen;
+section#nav-wrapper .page-2-wrapper section#menu-small {
 	width: 90%;
 	height: auto;
-	margin: 0 auto;
+	margin: 25px auto;
 }
 
-section#menu-small ul {
+section#nav-wrapper .page-2-wrapper section#menu-small ul {
 	display: -webkit-box;
 	display: flex;
 	flex-flow: wrap;
@@ -251,16 +305,18 @@ section#menu-small ul {
 	height: 100%;
 }
 
-section#menu-small ul li.grid-item {
+section#nav-wrapper .page-2-wrapper section#menu-small ul a {
+	text-decoration: none;
+}
+
+section#nav-wrapper .page-2-wrapper section#menu-small ul li.grid-item {
 	width: 45%;
 	height: 200px;
 	margin: 2.5%;
 	margin-bottom: 45%;
-	background-color: #e9b8f0;
 }
 
-section#menu-small ul li.grid-item .item-text {
-	background-color: pink;
+section#nav-wrapper .page-2-wrapper section#menu-small ul li.grid-item .item-text {
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
@@ -268,29 +324,139 @@ section#menu-small ul li.grid-item .item-text {
 	        flex-direction: column;
 	width: 100%;
 	position: relative;
-	bottom: -110%;
+	bottom: -220px;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 1.7em;
 }
 
-section#menu-small ul li.grid-item .item-text .t-1 {
+section#nav-wrapper .page-2-wrapper section#menu-small ul li.grid-item .item-text .t-1 {
 	width: 100%;
-	height: 75px;
+	height: 45px;
 	margin-bottom: 5%;
-	background-color: green;
+	background-color: #ECA84B;
+	padding: 5%;
 }
 
-section#menu-small ul li.grid-item .item-text .t-2 {
+section#nav-wrapper .page-2-wrapper section#menu-small ul li.grid-item .item-text .t-2 {
 	width: 75%;
-	background-color: greenyellow;
+	background-color: #ECA84B;
 	height: 35px;
+	padding: 2%;
 }
 
 @media (min-width: 600px) {
-	section#menu-small ul li.grid-item {
+	section#nav-wrapper .page-2-wrapper section#menu-small ul li.grid-item {
 		width: 25%;
-		height: 250px;
+		height: 200px;
 		margin: 4%;
+		margin-bottom: 17%;
 		background-color: #d56982;
 	}
+}
+
+section#nav-wrapper section#side-nav {
+	display: none;
+}
+
+@media (min-width: 1024px) {
+	section#nav-wrapper {
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		        flex-direction: row;
+	}
+	section#nav-wrapper section#side-nav {
+		display: block;
+		width: 25%;
+		background-color: #D72E2D;
+	}
+	section#nav-wrapper .page-2-wrapper {
+		width: 75%;
+	}
+}
+
+@media (min-width: 1360px) {
+	section#nav-wrapper {
+		margin: 0 auto;
+	}
+}
+
+.big-grid1 {
+	background-image: url("../img/TWDdaryl.jpg");
+	background-size: cover;
+	background-position-x: 45%;
+}
+
+.big-grid2 {
+	background-image: url("../img/TWDmichonne.jpg");
+	background-size: cover;
+	background-position-x: 25%;
+}
+
+.big-grid3 {
+	background-image: url("../img/TWDcarol.jpg");
+	background-size: cover;
+	background-position-x: 50%;
+}
+
+.big-grid4 {
+	background-image: url("../img/TWDcarl.jpg");
+	background-size: cover;
+	background-position-x: 55%;
+}
+
+.sm-grid1 {
+	background-image: url("../img/TWDglenn.jpg");
+	background-size: cover;
+	background-position-x: 45%;
+}
+
+.sm-grid2 {
+	background-image: url("../img/TWDrick.jpg");
+	background-size: cover;
+	background-position-x: 55%;
+}
+
+.sm-grid3 {
+	background-image: url("../img/TWDhershel.jpg");
+	background-size: cover;
+	background-position-x: 45%;
+}
+
+.sm-grid4 {
+	background-image: url("../img/TWDmaggie.jpg");
+	background-size: cover;
+	background-position-x: 45%;
+}
+
+.sm-grid5 {
+	background-image: url("../img/TWDmerle.jpg");
+	background-size: cover;
+	background-position-x: 45%;
+}
+
+.sm-grid6 {
+	background-image: url("../img/TWDtdog.jpg");
+	background-size: cover;
+	background-position-x: 45%;
+}
+
+.sm-grid7 {
+	background-image: url("../img/TWDshane.jpg");
+	background-size: cover;
+}
+
+.sm-grid8 {
+	background-image: url("../img/TWDtyreese.jpg");
+	background-size: cover;
+	background-position-x: 45%;
+}
+
+.sm-grid9 {
+	background-image: url("../img/TWDandrea.jpg");
+	background-size: cover;
+	background-position-x: 45%;
 }
 
 /* 1. Main Layout ================================= */

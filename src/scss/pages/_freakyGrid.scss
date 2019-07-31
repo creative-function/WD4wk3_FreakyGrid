@@ -3,141 +3,324 @@
 // $desktop: "(min-width: 1024px)";
 // $XLdesktop: "(min-width: 1360px)";
 
+body{
+    background-color: $stBody;
+}
 
-section#side-nav{
-    display:none;
+nav{
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin:2%;
+        padding: 2%;
+
+        a{
+            text-decoration: none;
+        }
+
+        @media#{$desktop}{
+            display: none;
+        }
+    }
+}
+
+
+section#nav-wrapper{
+    width:100%;
+    max-width: 1440px;
+         
+    .page-2-wrapper{
+        min-width: 360px;
+    
+        section#hdr{
+            background-image:url("../img/TWDhdr.jpg");
+            background-size: cover;
+            width:90%;
+            height: 256px;
+            margin:0 auto;
+            margin-bottom:10%;
+
+        }
+
+        section#menu-big{
+           width:90%;
+           height:auto;
+           margin: 0 auto;
+           background-color: $stHeading;
+          
+            ul{
+                display: flex;
+                flex-flow: wrap;
+                width:100%;
+                height: 100%;
+                
+        
+                li.grid-item{
+                    width: 100%;
+                    height:350px;
+                    margin:10%;
+                    margin-bottom:5%;
+                    border-top:5px solid black;
+                    position: relative;
+                
+                    .item-text{
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        position: absolute;
+                        bottom:-25%;
+                        right:10%;
+                        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                        font-size: 2em;
+                        letter-spacing: .3em;
+                       
+                        .t-1{
+                            width:75%;
+                            height: 35px;
+                            margin-bottom:5%;
+                            background-color: $stGold;
+                        }
+        
+                        .t-2{
+                            width:100%;
+                            height: 50px;
+                            background-color: $stGold;
+                        }
+        
+                    }
+        
+                }
+        
+                .grid-item:nth-child(even){
+                    border-bottom:5px solid black; 
+                    border-top:none; 
+        
+                    .item-text{
+                        top:-30px;
+                        
+                       
+                        .t-2{
+                            width:75%;
+                            height: 35px;
+                            margin-bottom:5%;
+                        }
+        
+                        .t-1{
+                            width:100%;
+                            height: 50px;
+                        }
+        
+                    }   
+                }
+        
+                .grid-item:nth-child(n+2):nth-child(-n+3){
+                    .item-text{
+                        left:-10%;
+                    }     
+                }
+        
+        
+                @media#{$tablet}{
+        
+                    li.grid-item{
+                        width: 40%;
+                        height:350px;
+                        margin:5%;
+                    }
+        
+                }
+            }
+        
+           
+        }
+        
+        section#menu-small{
+            
+            width:90%;
+            height:auto;
+            margin: 25px auto;
+            
+         
+            ul{
+                display: flex;
+                flex-flow: wrap;
+                width:100%;
+                height: 100%;
+
+                a{
+                    text-decoration: none;
+                }
+                
+        
+                li.grid-item{
+                    width: 45%;
+                    height:200px;
+                    margin:2.5%;
+                    margin-bottom: 45%;
+                    //background-color: rgb(233, 184, 240);
+        
+                    .item-text{
+                        //background-color: pink;
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        position: relative;
+                        bottom:-220px;
+                        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                        font-size: 1.7em;
+                       
+        
+                        .t-1{
+                            width:100%;
+                            height: 45px;
+                            margin-bottom:5%;
+                            background-color: $stGold;
+                            padding:5%;
+                        }
+        
+                        .t-2{
+                            width:75%;
+                            background-color: $stGold;
+                            height: 35px;
+                            padding:2%;
+                        }
+                    }
+                }
+        
+                @media#{$tablet}{
+        
+                    li.grid-item{
+                        width: 25%;
+                        height:200px;
+                        margin:4%;
+                        margin-bottom: 17%;
+                        background-color: rgb(213, 105, 130);
+            
+                    }
+        
+                }
+            }
+         
+        }
+    }
+    section#side-nav{
+        display:none;
+    }
 
     @media#{$desktop}{
-        display:block;
-        background-color: purple;
-     
-    }
-}
 
-.page-2-wrapper{
-    min-width: 360px;
-}
-section#menu-big{
-   background-color: orange;
-   width:90%;
-   height:auto;
-   margin: 0 auto;
-
-  
-    ul{
         display: flex;
-        flex-flow: wrap;
-        width:100%;
-        height: 100%;
-        
+        flex-direction: row;
 
-        li.grid-item{
-            width: 100%;
-            height:350px;
-            margin:7%;
-            background-color: yellow;
-            position: relative;
-
-            .item-text{
-                background-color: pink;
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-                position: absolute;
-                bottom:-7%;
-                right:-10%;
-
-                .t-1{
-                    width:75%;
-                    height: 35px;
-                    margin-bottom:5%;
-                    background-color: green;
-
-                }
-
-                .t-2{
-                    width:100%;
-                    background-color: greenyellow;
-                    height: 75px;
-
-                }
-            }
+        section#side-nav{
+            display:block;
+            width:25%;
+            background-color: $stRed;
         }
 
-        @media#{$tablet}{
-
-            li.grid-item{
-                width: 40%;
-                height:400px;
-                margin:5%;
-                background-color: paleturquoise;
-            }
-
+        .page-2-wrapper{
+            width:75%;
         }
     }
 
-}
-
-
-section#menu-small{
-    background-color: lightseagreen;
-    width:90%;
-    height:auto;
-    margin: 0 auto;
-    
- 
-    ul{
-        display: flex;
-        flex-flow: wrap;
-        width:100%;
-        height: 100%;
-        
-
-        li.grid-item{
-            width: 45%;
-            height:200px;
-            margin:2.5%;
-            margin-bottom: 45%;
-            background-color: rgb(233, 184, 240);
-
-            .item-text{
-                background-color: pink;
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-                position: relative;
-                bottom:-110%;
-
-                .t-1{
-                    width:100%;
-                    height: 75px;
-                    margin-bottom:5%;
-                    background-color: green;
-
-                }
-
-                .t-2{
-                    width:75%;
-                    background-color: greenyellow;
-                    height: 35px;
-
-                }
-            }
-        }
-
-        @media#{$tablet}{
-
-            li.grid-item{
-                width: 25%;
-                height:250px;
-                margin:4%;
-                background-color: rgb(213, 105, 130);
-    
-            }
-
-        }
+    @media#{$XLdesktop}{
+        margin: 0 auto;
     }
- 
 }
- 
 
+
+//BIG GRID IMAGES 
+
+.big-grid1{
+    background-image:url("../img/TWDdaryl.jpg");
+    background-size: cover;
+    background-position-x: 45%;
+    
+}
+
+.big-grid2{
+    background-image:url("../img/TWDmichonne.jpg");
+    background-size: cover;
+    background-position-x: 25%;
+    
+}
+
+.big-grid3{
+    background-image:url("../img/TWDcarol.jpg");
+    background-size: cover;
+    background-position-x: 50%;
+    
+}
+
+.big-grid4{
+    background-image:url("../img/TWDcarl.jpg");
+    background-size: cover;
+    background-position-x: 55%;
+    
+}
+
+///SMALL GRID IMAGES 
+
+.sm-grid1{
+    background-image:url("../img/TWDglenn.jpg");
+    background-size: cover;
+    background-position-x: 45%;
+    
+}
+
+.sm-grid2{
+    background-image:url("../img/TWDrick.jpg");
+    background-size: cover;
+    background-position-x: 55%;
+    
+}
+
+.sm-grid3{
+    background-image:url("../img/TWDhershel.jpg");
+    background-size: cover;
+    background-position-x: 45%;
+    
+}
+
+.sm-grid4{
+    background-image:url("../img/TWDmaggie.jpg");
+    background-size: cover;
+    background-position-x: 45%;
+    
+}
+
+.sm-grid5{
+    background-image:url("../img/TWDmerle.jpg");
+    background-size: cover;
+    background-position-x: 45%;
+    
+}
+
+.sm-grid6{
+    background-image:url("../img/TWDtdog.jpg");
+    background-size: cover;
+    background-position-x: 45%;
+    
+}
+
+.sm-grid7{
+    background-image:url("../img/TWDshane.jpg");
+    background-size: cover;
+    
+}
+
+.sm-grid8{
+    background-image:url("../img/TWDtyreese.jpg");
+    background-size: cover;
+    background-position-x: 45%;
+    
+}
+
+.sm-grid9{
+    background-image:url("../img/TWDandrea.jpg");
+    background-size: cover;
+    background-position-x: 45%;
+    
+}
